@@ -1,14 +1,4 @@
-body {
-    background: #35dc9b;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-h1 {
+.input h1 {
     margin: 0 auto 40px;
     color: #fff;
     font: 20px Helvetica;
@@ -16,11 +6,11 @@ h1 {
     letter-spacing: 3px;
 }
 
-form row {
+
+.input form .row {
     display: flex;
     justify-content: center;
     width: 100%;
-    border: 1px solid red;
     text-align: center;
 }
 
@@ -32,6 +22,7 @@ form label input {
     font: 18px Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     border: none;
+    border-radius: 5px;
     padding: 20px;
     width: 300px;
     margin: 20px;

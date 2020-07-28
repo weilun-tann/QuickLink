@@ -62,7 +62,7 @@ These are the key ⚒ frameworks and tools ⚒ which were used extensively durin
 
 
 ## 📸 Usage & Demo 📸
-<a href="https://quicklink-8692c.web.app/" target="_blank"><img src="quicklink/public/demo.JPG" /></a><br><br>
+<a href="https://quicklink-8692c.web.app/" target="_blank"><img src="quicklink/public/demo.PNG" /></a><br><br>
 
 
 

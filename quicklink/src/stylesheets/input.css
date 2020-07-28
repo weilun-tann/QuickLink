@@ -1,13 +1,9 @@
-.input h1 {
-    margin: 0 auto 40px;
-    color: #fff;
-    font: 20px Helvetica;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+#input {
+    position: relative;
+    top: 150px;
 }
 
-
-.input form .row {
+form .row {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -25,8 +21,7 @@ form label input {
     border-radius: 5px;
     padding: 20px;
     width: 300px;
-    margin: 20px;
-    font-size: 18px;
+    margin: 15px;
     outline: none;
     transition: all 0.2s ease-in-out;
 }
@@ -48,29 +43,17 @@ form label input:focus::placeholder, form label input.populated::placeholder {
 
 form label input:focus + span, form label input.populated + span {
     opacity: 1;
-    top: -15px;
+    top: 25px;
 }
 
 form label span {
-    color: #35dc9b;
+    color: #FDA7DF;
     font: 13px Helvetica, Arial, sans-serif;
+    font-weight: bold;
     position: absolute;
     padding-left: 10px;
-    top: 0px;
+    top: 0;
     left: 20px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-}
-
-form input[type="submit"] {
-    transition: all 0.2s ease-in-out;
-    font: 18px Helvetica, Arial, sans-serif;
-    border: none;
-    background: #1aaf75;
-    color: #fff;
-    padding: 16px 40px;
-}
-
-form input[type="submit"]:hover {
-    background: #109f67;
 }

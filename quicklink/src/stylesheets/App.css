@@ -3,10 +3,7 @@
 }
 
 body {
-    background: #35dc9b;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
+    background: #ffcccc;
     align-items: center;
     justify-content: center;
     height: 100vh;

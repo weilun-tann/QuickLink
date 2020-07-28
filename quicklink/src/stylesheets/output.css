@@ -1,66 +1,97 @@
-#output .editable-text {
+#output {
+    position: relative;
+    top: 200px;
+}
+
+.output-text {
     background-color: white;
     border-radius: 5px;
-    height: 20vh;
     line-height: 2;
     margin: 0 auto;
-    padding: 10px 25px 10px 25px;
+    padding: 30px 40px 30px 40px;
+    position: relative;
     text-align: justify;
     text-justify: inter-word;
     user-select: none;
-    width: 86%;
+    white-space: pre-wrap;
+    width: 77%;
     -ms-user-select: none;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
 }
 
-#output .editable-text:hover {
+.output-text:hover {
     cursor: pointer;
     opacity: 70%;
 }
 
-#copied {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    z-index: 1000;
+.snackbar {
+    background-color: #32ff7e;
+    border-radius: 5px;
+    bottom: 30px;
+    display: inline-block;
+    font-weight: bold;
+    left: 44%;
+    padding: 16px;
+    position: fixed;
+    text-align: center;
+    text-transform: capitalize;
+    visibility: hidden;
+    width: 10%;
+    min-width: 80px;
+    z-index: 10;
 }
 
-.copiedEffect {
-    animation: rippleDrop .5s linear;
+/* Snackbar animations */
+.show {
+    visibility: visible !important; /* Show the snackbar */
+
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-#ripple {
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 1);
-    transform: scale(.8);
-    position: absolute;
-    opacity: 0;
-
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
 }
 
-.rippleEffect {
-    animation: rippleDrop .5s linear;
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
 }
 
-.copiedEffect {
-    animation: copiedDrop 1s ease;
-}
-
-@keyframes rippleDrop {
-    100% {
-        transform: scale(1);
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
         opacity: 0;
     }
 }
 
-@keyframes copiedDrop {
-    50% {
-        transform: scale(.8);
+@keyframes fadeout {
+    from {
+        bottom: 30px;
         opacity: 1;
     }
-    100% {
-        transform: scale(1.2);
+    to {
+        bottom: 0;
         opacity: 0;
     }
 }

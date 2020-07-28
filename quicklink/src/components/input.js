@@ -21,7 +21,7 @@ class Input extends Component {
         return (
             <div id="input">
                 <form>
-                    {/*NAME*/}
+                    {/*YOUR DETAILS*/}
                     <div className="row">
                         <label>
                             <input id="name_in" type="text" placeholder="Your Name"
@@ -30,33 +30,30 @@ class Input extends Component {
                         </label>
 
                         <label>
-                            <input id="r_name_in" type="text" placeholder="Recruiter's Name"
-                                   defaultValue={this.state.rName ? this.state.rName : null}/>
-                            <span>Recruiter's Name</span>
-                        </label>
-                    </div>
-
-                    {/*POSITION*/}
-                    <div className="row">
-                        <label>
                             <input id="pos_in" type="text" placeholder="Your Position"
                                    defaultValue={this.state.pos ? this.state.pos : null}/>
                             <span>Your Position</span>
                         </label>
 
                         <label>
-                            <input id="r_pos_in" type="text" placeholder="Recruiter's Position"
-                                   defaultValue={this.state.rPos ? this.state.rPos : null}/>
-                            <span>Recruiter's Position</span>
-                        </label>
-                    </div>
-
-                    {/*COMPANY*/}
-                    <div className="row">
-                        <label>
                             <input id="coy_in" type="text" placeholder="Your Company"
                                    defaultValue={this.state.coy ? this.state.coy : null}/>
                             <span>Your Company</span>
+                        </label>
+                    </div>
+
+                    {/*RECRUITER'S DETAILS*/}
+                    <div className="row">
+                        <label>
+                            <input id="r_name_in" type="text" placeholder="Recruiter's Name"
+                                   defaultValue={this.state.rName ? this.state.rName : null}/>
+                            <span>Recruiter's Name</span>
+                        </label>
+
+                        <label>
+                            <input id="r_pos_in" type="text" placeholder="Recruiter's Position"
+                                   defaultValue={this.state.rPos ? this.state.rPos : null}/>
+                            <span>Recruiter's Position</span>
                         </label>
 
                         <label>

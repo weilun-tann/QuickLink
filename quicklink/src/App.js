@@ -72,10 +72,21 @@ class App extends Component {
     };
 
     copyToClipboard() {
-        const editableText = $(this.state.template);
-        editableText.select();
-        document.execCommand('copy');
-        editableText.blur()
+        const editableText = $(`#${this.state.template}`);
+        console.log(editableText)
+        console.log(editableText.text())
+        this.copyText(editableText.text());
+    }
+
+    copyText (textToCopy) {
+        const textarea = document.createElement('textarea')
+        textarea.value = textToCopy
+        textarea.style.position = 'absolute';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select()
+        var successful = document.execCommand('copy');
+        textarea.remove()
     }
 
     loadFromSessionStorage() {

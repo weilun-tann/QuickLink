@@ -78,14 +78,14 @@ class App extends Component {
         this.copyText(editableText.text());
     }
 
-    copyText (textToCopy) {
+    copyText(textToCopy) {
         const textarea = document.createElement('textarea')
         textarea.value = textToCopy
         textarea.style.position = 'absolute';
         textarea.style.left = '-9999px';
         document.body.appendChild(textarea);
         textarea.select()
-        var successful = document.execCommand('copy');
+        document.execCommand('copy');
         textarea.remove()
     }
 
